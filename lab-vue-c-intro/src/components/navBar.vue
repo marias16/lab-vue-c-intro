@@ -1,10 +1,3 @@
-<script>
-export default{
-    name: "NavBar"
-}
-
-</script>
-
 <template>
     <div>
         <img alt="" class="iron-logo" src="../assets/Ironhack_logo.png"  />
