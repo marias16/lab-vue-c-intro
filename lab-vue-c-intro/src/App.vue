@@ -1,12 +1,13 @@
 <script setup>
 import NavBar from './components/navBar.vue'
 import PageHero from './components/pageHero.vue'
+import BenefSection from './components/benefitSection.vue'
 </script>
 
 <template>
   <NavBar />
   <PageHero />
-
+  <BenefSection />
 </template>
 
 <style scoped>
@@ -15,8 +16,5 @@ import PageHero from './components/pageHero.vue'
 body {
   font-family: 'Inter', sans-serif;
 }
-
-
-
 
 </style>
