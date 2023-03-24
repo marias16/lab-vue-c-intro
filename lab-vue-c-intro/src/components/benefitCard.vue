@@ -1,14 +1,25 @@
 <script>
 export default {
     name: 'BenefitCard',
+    props: {
+        imageSource: {
+            type: String,
+        },
+        title: {
+            type: String,
+        },
+        text: {
+            type: String,
+        }
+    }
 }
 </script>
 
 <template>
 <div>
-<img src="../assets/USP-1.png">
-<h3>Performance</h3> 
-<p>Truly reactive, compiler-optimized rendering system that rarely requires manual optimization.</p>
+<img :src="imageSource">
+<h3>{{title}}</h3> 
+<p>{{text}}</p>
 </div>
 </template>
 

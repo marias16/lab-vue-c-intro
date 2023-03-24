@@ -1,9 +1,9 @@
 <script>
-/*import BenefitCard from './benefitCard.vue'*/
+import BenefitCard from './benefitCard.vue'
 export default {
-  /*components: {
+  components: {
     BenefitCard
-  },*/
+  },
   data() {
   	return {
     	items: [
@@ -24,15 +24,15 @@ export default {
 
 <template>
     <div id="bodyBenefits">
-        <div 
-            v-for="item in items"
-            :key="item.image">
-            <img v-bind:src="'/src/assets/USP-' + item.image">
-            <h3>{{ item.title }}</h3> 
-            <p>{{ item.text }}</p>
-        </div>
+        <BenefitCard 
+        v-for="item in items"
+        :key="item.id"
+        :imageSource="'/src/assets/USP-' + item.image"
+        :title="item.title"
+        :text="item.text"
+        />
     </div>
-    
+
 </template>
 
 <style scoped>
@@ -40,6 +40,9 @@ export default {
     background-color: #39B983;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 2em;
+    margin: 2em auto;
 }
 
 div {
